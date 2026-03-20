@@ -1,0 +1,184 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* PLACEHOLDER BACKGROUND IMAGE - Replace url below with your image */
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); 
+    background-color: #0b0c15; /* Fallback color */
+    background-repeat: repeat;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(11, 12, 21, 0.9);
+    border-bottom: 1px solid #2d2d3a;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    background-color: #2d3748;
+    color: #4fd1c5;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.nav-links a {
+    color: #a0aaec;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4fd1c5;
+}
+
+/* Layout Container */
+.container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    height: 100%;
+}
+
+/* Glassmorphism Sidebar */
+.glass-panel {
+    background: rgba(22, 24, 35, 0.6); /* Semi-transparent dark */
+    backdrop-filter: blur(12px); /* The blur effect */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 25px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.control-group h3 {
+    font-size: 0.9rem;
+    color: #a0aaec;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.func-btn {
+    padding: 12px;
+    background-color: #1a1b26;
+    border: 1px solid #2d2d3a;
+    border-radius: 8px;
+    color: #a0aaec;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.func-btn:hover {
+    background-color: #25263a;
+}
+
+.func-btn.active {
+    background-color: #4fd1c5;
+    color: #0b0c15;
+    font-weight: bold;
+    border-color: #4fd1c5;
+}
+
+/* Sliders */
+.slider-container {
+    margin-bottom: 20px;
+}
+
+.slider-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 8px;
+}
+
+.slider-label span:last-child {
+    color: #4fd1c5;
+}
+
+input[type=range] {
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #1a202c;
+    border: 2px solid #4fd1c5;
+    cursor: pointer;
+    margin-top: -6px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    background: #4fd1c5;
+    border-radius: 2px;
+}
+
+/* Formula Box */
+.formula-box {
+    margin-top: 10px;
+}
+
+#formula-display {
+    color: #ed8936; /* Orange color from image */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Graph Area */
+.graph-container {
+    flex: 1;
+    background-color: #13141f;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

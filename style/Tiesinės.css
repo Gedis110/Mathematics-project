@@ -1,0 +1,13 @@
+@import url(main.css);
+
+body{
+    background-image: url(../img/img.jpg);
+}
+
+h1{
+    color: white;
+}
+.boxes{
+    text-align: center;
+    margin: 0 auto;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcijų Vizualizatorius</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/graphs.css">
+    <script defer src="../script/graphs.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-sigma"></i></span>
+            <span class="logo-text">f(x)</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">Pradžia</a>
+            <a href="#">Tyrinėk</a>
+            <a href="#">Funkcijos</a>
+            <a href="#">Mokykis</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <aside class="sidebar glass-panel">
+            
+            <div class="control-group">
+                <h3>Funkcijos tipas</h3>
+                <div class="button-grid">
+                    <button class="func-btn" data-type="linear">Tiesinė</button>
+                    <button class="func-btn" data-type="quadratic">Kvadratinė</button>
+                    <button class="func-btn" data-type="sine">Sinusinė</button>
+                    <button class="func-btn active" data-type="exponential">Eksponentinė</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Parametrai</h3>
+                
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>X Ašis (Mastelis)</span>
+                        <span id="val-x">1.0</span>
+                    </div>
+                    <input type="range" id="slider-x" min="0.1" max="5.0" step="0.1" value="1.0">
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>Y Ašis (Mastelis)</span>
+                        <span id="val-y">1.0</span>
+                    </div>
+                    <input type="range" id="slider-y" min="0.1" max="5.0" step="0.1" value="1.0">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Formulė</h3>
+                <div class="formula-box">
+                    <p id="formula-display">y = e^x</p>
+                </div>
+            </div>
+
+        </aside>
+
+        <main class="graph-container">
+            <canvas id="graphCanvas"></canvas>
+        </main>
+
+    </div>
+
+</body>
+</html>
